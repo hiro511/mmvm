@@ -27,7 +27,7 @@ static const char memoryLog[8][10] =
 	{"bx+si", "bx+di", "bp+si", "bp+di", "si", "di", "bp", "bx"};
 
 //parser
-extern void parseText(const unsigned char* binary, const header header, const int start, const int end, const enum Option op);
+extern void parseText(const unsigned char* binary, const header header, const int start, const int end, const enum Option op, const int argc, char* argv[]);
 extern int parseMnemonic(const unsigned char* binary, int count, cpu* cpu, const enum Option op);
 
 #endif
