@@ -16,8 +16,6 @@ void initCpu(cpu* cpu, header header){
 		cpu->reg[i] =  0x0;
 	}
 
-	cpu->reg[4] = 0xffdc;
-
 	cpu->o = 0x0;
 	cpu->s = 0x0;
 	cpu->z = 0x0;
@@ -28,18 +26,31 @@ void initCpu(cpu* cpu, header header){
     }
 }
 
-void initStack(cpu* cpu, header header){
-	unsigned char stack[36] = {0};
-	stack[0] = 2;
-	stack[2] = 0xe6;
-	stack[3] = 0xff;
-	stack[6] = 0xec;
-	stack[7] = 0xff;
-	stack[8] = -1;
-	memcpy(&stack[10], "a.out", 6);
-	memcpy(&stack[16], "PATH=:/bin:/usr/bin", 20);
+void initStack(cpu* cpu, header header, const int argc, char* argv[]){
+    
+    int stackLen = 4 + (argc * 2);
+    for (int i = 0; i < argc; i++){
+        stackLen += strlen(argv[i]) + 1;
+    }
+	unsigned char* stack = malloc(stackLen);
+    
+    memcpy(stack, (uint16_t*)&argc, 2);
+    uint16_t endSymbol = -1;
+    memcpy(&stack[(argc+1)*2], &endSymbol, 2);
+    
+    uint16_t sp = 0xffff;
+    uint16_t stackIdx = stackLen;
+    for (int i = argc-1; i >= 0; i--) {
+        sp -= (uint16_t)(strlen(argv[i]) + 1);
+        memcpy(&stack[(i+1)*2], &sp, 2);
+        
+        stackIdx -= (strlen(argv[i]) + 1);
+        strcpy((char*)&stack[stackIdx], argv[i]);
+    }
 
-	memcpy(&cpu->memory[0xffdc], stack, 36);
+	memcpy(&cpu->memory[0xffff-stackLen], stack, stackLen);
+    cpu->reg[4] = 0xffff - stackLen;
+    
 }
 
 void initData(cpu* cpu, header header, const unsigned char* binary){

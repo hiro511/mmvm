@@ -21,5 +21,5 @@ void disassemble(const unsigned char* binary, const enum Option op, const int ar
     /* Debug */
 	//showHeader(header);
     
-	parseText(binary, header, header.length, (int)(header.length + header.text), op);
+	parseText(binary, header, header.length, (int)(header.length + header.text), op, argc, argv);
 }

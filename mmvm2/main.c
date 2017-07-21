@@ -12,17 +12,13 @@
 void printWhiteSpace(int size);
 
 int main(int argc, char* argv[]){
-    int pArgc = argc;
-    char** pArgv = argv;
 
 	if(!strcmp(argv[1], "-d")){
-		disassembleWithFilename(argv[2], DISASSEMBLE, pArgc, pArgv);
+		disassembleWithFilename(argv[2], DISASSEMBLE, argc-2, &argv[2]);
 	}else if(!strcmp(argv[1], "-m")){
-		disassembleWithFilename(argv[2], MONITOR, pArgc, pArgv);
-	}else if(argc == 3){
-		printf("unknown option: %s\n", argv[1]);
-    }else if(argc == 2){
-        disassembleWithFilename(argv[1], NONE, pArgc, pArgv);
+		disassembleWithFilename(argv[2], MONITOR, argc-2, &argv[2]);
+    }else {
+        disassembleWithFilename(argv[1], NONE, argc-1, &argv[1]);
     }
 
 	printf("all end\n");

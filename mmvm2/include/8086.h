@@ -20,7 +20,7 @@ typedef struct cpu{
 }cpu;
 
 extern void initCpu(cpu* cpu, header header);
-extern void initStack(cpu* cpu, header header);
+extern void initStack(cpu* cpu, header header, const int argc, char* argv[]);
 extern void initData(cpu* cpu, header header, const unsigned char* binary);
 extern void resetFlags(cpu* cpu);
 

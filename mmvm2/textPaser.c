@@ -8,12 +8,13 @@
 #include "headerPaser.h"
 #include "textPaser.h"
 
-void parseText(const unsigned char* binary, const header header, const int start, const int end, const enum Option op){
+void parseText(const unsigned char* binary, const header header, const int start, const int end, const enum Option op, const int argc, char* argv[]){
 	cpu cpu;
 	initCpu(&cpu, header);
-	initStack(&cpu, header);
+	initStack(&cpu, header, argc, argv);
     
-//    for (int i = 0xffdc; i < 0xffff; i++) {
+    // for stack debug
+//    for (int i = 0xffb5; i <= 0xffff; i++) {
 //        printf("%04x : %02x\n", i, cpu.memory[i]);
 //    }
 
