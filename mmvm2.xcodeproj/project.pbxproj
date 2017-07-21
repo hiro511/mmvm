@@ -15,7 +15,6 @@
 		53D851BC1A63863F00EF7B7C /* instractionPaser.c in Sources */ = {isa = PBXBuildFile; fileRef = 53D851B21A63863F00EF7B7C /* instractionPaser.c */; };
 		53D851BD1A63863F00EF7B7C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 53D851B41A63863F00EF7B7C /* main.c */; };
 		53D851BE1A63863F00EF7B7C /* textPaser.c in Sources */ = {isa = PBXBuildFile; fileRef = 53D851B51A63863F00EF7B7C /* textPaser.c */; };
-		53D851C01A63871100EF7B7C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 53D851BF1A63871100EF7B7C /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,23 +30,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45EF54AB1F21AC84001AB854 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		53D8519D1A63856400EF7B7C /* mmvm2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mmvm2; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D851A81A63863F00EF7B7C /* 8086.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 8086.c; sourceTree = "<group>"; };
-		53D851A91A63863F00EF7B7C /* 8086.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 8086.h; sourceTree = "<group>"; };
 		53D851AA1A63863F00EF7B7C /* 8086Log.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 8086Log.c; sourceTree = "<group>"; };
-		53D851AB1A63863F00EF7B7C /* 8086Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 8086Log.h; sourceTree = "<group>"; };
 		53D851AC1A63863F00EF7B7C /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
-		53D851AD1A63863F00EF7B7C /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		53D851AE1A63863F00EF7B7C /* disassemble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = disassemble.c; sourceTree = "<group>"; };
-		53D851AF1A63863F00EF7B7C /* disassemble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = disassemble.h; sourceTree = "<group>"; };
 		53D851B01A63863F00EF7B7C /* headerPaser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = headerPaser.c; sourceTree = "<group>"; };
-		53D851B11A63863F00EF7B7C /* headerPaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerPaser.h; sourceTree = "<group>"; };
 		53D851B21A63863F00EF7B7C /* instractionPaser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = instractionPaser.c; sourceTree = "<group>"; };
-		53D851B31A63863F00EF7B7C /* instractionPaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instractionPaser.h; sourceTree = "<group>"; };
 		53D851B41A63863F00EF7B7C /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		53D851B51A63863F00EF7B7C /* textPaser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = textPaser.c; sourceTree = "<group>"; };
-		53D851B61A63863F00EF7B7C /* textPaser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textPaser.h; sourceTree = "<group>"; };
-		53D851BF1A63871100EF7B7C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,22 +72,15 @@
 		53D8519F1A63856400EF7B7C /* mmvm2 */ = {
 			isa = PBXGroup;
 			children = (
-				53D851BF1A63871100EF7B7C /* Makefile */,
+				45EF54AB1F21AC84001AB854 /* include */,
 				53D851B41A63863F00EF7B7C /* main.c */,
 				53D851A81A63863F00EF7B7C /* 8086.c */,
-				53D851A91A63863F00EF7B7C /* 8086.h */,
 				53D851AA1A63863F00EF7B7C /* 8086Log.c */,
-				53D851AB1A63863F00EF7B7C /* 8086Log.h */,
 				53D851AC1A63863F00EF7B7C /* common.c */,
-				53D851AD1A63863F00EF7B7C /* common.h */,
 				53D851AE1A63863F00EF7B7C /* disassemble.c */,
-				53D851AF1A63863F00EF7B7C /* disassemble.h */,
 				53D851B01A63863F00EF7B7C /* headerPaser.c */,
-				53D851B11A63863F00EF7B7C /* headerPaser.h */,
 				53D851B21A63863F00EF7B7C /* instractionPaser.c */,
-				53D851B31A63863F00EF7B7C /* instractionPaser.h */,
 				53D851B51A63863F00EF7B7C /* textPaser.c */,
-				53D851B61A63863F00EF7B7C /* textPaser.h */,
 			);
 			path = mmvm2;
 			sourceTree = "<group>";
@@ -156,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D851C01A63871100EF7B7C /* Makefile in Sources */,
 				53D851BC1A63863F00EF7B7C /* instractionPaser.c in Sources */,
 				53D851BB1A63863F00EF7B7C /* headerPaser.c in Sources */,
 				53D851B91A63863F00EF7B7C /* common.c in Sources */,
@@ -188,6 +172,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_HEADERS_UNIFDEF_FLAGS = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -207,6 +192,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-I./mmvm2/include";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -228,6 +214,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_HEADERS_UNIFDEF_FLAGS = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -241,6 +228,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "-I./mmvm2/include";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -286,6 +274,7 @@
 				53D851A61A63856400EF7B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
